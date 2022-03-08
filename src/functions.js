@@ -13,7 +13,7 @@ function whoisLookup() {
         if (arr.expires !== null) {
           document.getElementById("expirationOutput").innerHTML = arr.expires;
         } else {
-          document.getElementById("expirationOutput").innerHTML = "URL inválido";
+          document.getElementById("expirationOutput").innerHTML = "URL inexistente";
         }
       } else {
         var error = JSON.parse(this.responseText);
