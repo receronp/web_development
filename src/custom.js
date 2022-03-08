@@ -1,8 +1,15 @@
-var request = new XMLHttpRequest();
-request.open("GET", "./src/config/test-config.json", false);
-request.send(null)
+var xmlhttp = new XMLHttpRequest();
+var url = "./src/config/site-config.json";
 
-var dt = new Date()
-document.getElementById("current_date").innerHTML = dt.toDateString();
-var configJson= JSON.parse(request.responseText);
-document.getElementById("name").innerHTML = configJson.name;
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        getName(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function getName(arr) {
+  document.getElementById("name").innerHTML = arr.name;
+}
