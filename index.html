@@ -19,51 +19,71 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!-- Custom site functions JS -->
-  <script type = "text/javascript" src="./src/functions.js"></script>
+  <script type="text/javascript" src="./src/functions.js"></script>
 
 </head>
 
 <body>
-  <section class="py-5 text-center">
-    <div class="row">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Práctica 2: Github</h1>
-        <hr>
-        <img src="./src/img/Cisco1.jpg" height="300"></img>
-        <br>
-        <br>
-        <p class="lead text-muted">Este sitio está siendo desarrollado por <b style="color: rgb(220, 3, 39);"
-            id="name"></b></p>
-        <p>
-          <a href="mailto:A00823906@tec.mx" class="btn btn-primary">Mándame un correo</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Checa la fecha de expiración de un dominio web</h1>
-          <br>
-          <div class="input-group">
-            <span class="input-group-text">Input</span>
-            <input class="form-control" aria-label="Input" placeholder="Ingresa URL de página." id="domainInput"></input>
-            <button type="submit" class="btn btn-primary" onclick="whoisLookup()">Submit</button>
-          </div>
-          <hr>
-          <div class="input-group">
-            <span class="input-group-text">Output</span>
-            <textarea readonly class="form-control" aria-label="Output" id="expirationOutput"></textarea>
-          </div>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home (P2)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./curriculum.html">Curriculum (P3)</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="py-5 text-center">
+        <div class="row">
+          <h1 class="fw-light" style="padding-top: 3rem;">Práctica 2: Github</h1>
+          <hr>
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <img src="./src/img/Cisco1.jpg" height="300"></img>
+          </div>
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h3 class="fw-light" style="padding-top: 3rem;">Checa la fecha de expiración de un dominio web</h3>
+            <br>
+            <div class="input-group">
+              <span class="input-group-text">Input</span>
+              <input class="form-control" aria-label="Input" placeholder="Ingresa URL de página."
+                id="domainInput"></input>
+              <button type="submit" class="btn btn-primary" onclick="whoisLookup()">Submit</button>
+            </div>
+            <hr>
+            <div class="input-group">
+              <span class="input-group-text">Output</span>
+              <textarea readonly class="form-control" aria-label="Output" id="expirationOutput"></textarea>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 1rem;">
+            <p class="lead text-muted">Este sitio está siendo desarrollado por <b style="color: rgb(220, 3, 39);"
+                id="name"></b></p>
+            <p>
+              <a href="mailto:A00823906@tec.mx" class="btn btn-primary">Mándame un correo</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <!-- Custom site JS -->
-  <script type = "text/javascript" src="./src/custom.js"></script>
+  <script type="text/javascript" src="./src/custom.js"></script>
 
   <!-- Separate Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
