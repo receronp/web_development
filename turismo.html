@@ -35,18 +35,19 @@
           </section>
           <hr>
           <div class="col-lg-6 col-md-8 mx-auto">
-            <img :src="img" height="300"></img>
+            <img :src="locationImage" height="300"></img>
           </div>
           <div class="col-lg-6 col-md-8 mx-auto">
             <ul class="list-group">
               <li class="list-group-item" v-for="(location, index) in locations">
-                <p>{{ location.name }} <input type="button" value="select" @click="img = location.img"></p>
+                <p>{{ location.name }} <input type="button" value="select" @click="locationImage = index"></p>
               </li>
             </ul>
             <br>
             <p>Reservation under the name of:</p>
             <ul>
-              <input v-model="name">
+              <input v-model="name" @keyup.enter="submit">
+              <input type="button" value="submit" @click="submit">
             </ul>
           </div>
           <hr>
